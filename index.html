@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rebel Web — Simple Websites. Real Results.</title>
+<meta name="description" content="Affordable, professional websites for small businesses in Ireland. Custom design, SEO setup, mobile ready — from €399, live in 7 days. Cork-based, serving clients everywhere.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rebelweb.ie/">
+<meta property="og:title" content="Rebel Web — Simple Websites. Real Results.">
+<meta property="og:description" content="Affordable, professional websites for small businesses in Ireland. Custom design, SEO setup, mobile ready — from €399, live in 7 days.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rebelweb.ie/">
+<meta property="og:site_name" content="Rebel Web">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rebel Web — Simple Websites. Real Results.">
+<meta name="twitter:description" content="Affordable, professional websites for small businesses in Ireland. From €399, live in 7 days.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --green:       #0F3D22;
+  --green-mid:   #1A5C35;
+  --green-light: #2E8B57;
+  --green-pale:  #E8F2EC;
+  --green-line:  #C5DFD0;
+  --white:       #FAF8F4;
+  --off:         #F3F0EA;
+  --text:        #0A1F12;
+  --text-mid:    #3D5248;
+  --text-soft:   #7A9488;
+  --border:      #D4E4DA;
+  --silver:      #C7D1CE;
+  --silver-dim:  #7C8B85;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── FAQ ── */
+.faq { padding:112px 56px; background:var(--white); }
+
+.faq-head {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:48px; align-items:end; margin-bottom:64px;
+}
+
+.faq-list { max-width:860px; margin:0 auto; }
+
+.faq-item {
+  border-bottom:1.5px solid var(--border);
+}
+.faq-item:first-child { border-top:1.5px solid var(--border); }
+
+.faq-q {
+  width:100%; background:none; border:none; cursor:pointer;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:28px 0; gap:24px;
+  font-family:'Outfit',sans-serif; font-size:16px; font-weight:400;
+  color:var(--text); text-align:left;
+  transition:color .2s;
+}
+.faq-q:hover { color:var(--green); }
+.faq-q.open { color:var(--green); }
+
+.faq-icon {
+  width:28px; height:28px; border-radius:50%;
+  border:1.5px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; transition:background .2s, border-color .2s, transform .3s;
+}
+.faq-q.open .faq-icon {
+  background:var(--green); border-color:var(--green); transform:rotate(45deg);
+}
+.faq-icon svg { width:12px; height:12px; }
+.faq-icon svg path { stroke:var(--text-soft); transition:stroke .2s; }
+.faq-q.open .faq-icon svg path { stroke:var(--white); }
+
+.faq-a {
+  overflow:hidden; max-height:0;
+  transition:max-height .4s ease, padding .3s ease;
+}
+.faq-a.open { max-height:400px; }
+
+.faq-a-inner {
+  padding:0 0 28px;
+  font-size:15px; line-height:1.85; color:var(--text-mid);
+}
+.faq-a-inner strong { color:var(--text); font-weight:500; }
+
+
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  height: 68px;
+  background: var(--white);
+  border-bottom: 1.5px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 56px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex; align-items: center; gap:10px;
+  text-decoration: none;
+}
+.logo-box {
+  width:34px; height:34px; background:var(--green);
+  border-radius:8px; display:flex; align-items:center; justify-content:center;
+}
+.logo-box svg { width:18px; height:18px; }
+.logo-name {
+  font-family:'Fraunces',serif; font-size:19px; font-weight:600;
+  color:var(--green); letter-spacing:-0.03em;
+}
+
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a {
+  font-size:14px; font-weight:400; color:var(--text-mid);
+  text-decoration:none; transition:color .2s;
+}
+.nav-links a:hover { color:var(--green); }
+
+.nav-btn {
+  font-family:'Outfit',sans-serif; font-size:14px; font-weight:500;
+  background:var(--green); color:var(--white);
+  padding:11px 26px; border-radius:7px; text-decoration:none;
+  transition: background .2s, transform .15s;
+}
+.nav-btn:hover { background:var(--green-mid); transform:translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  padding-top: 68px;
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items:center; justify-content:center;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #16352A 0%, #0A1712 55%, #060F0B 100%);
+}
+
+.hero-grid {
+  position:absolute; inset:0; z-index:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 46px);
+  background-size:46px 46px, 46px 46px, auto;
+}
+.hero-glow-a {
+  position:absolute; z-index:0; top:-15%; left:-10%;
+  width:620px; height:620px; border-radius:50%;
+  background:radial-gradient(circle, rgba(46,139,87,0.4) 0%, transparent 68%);
+}
+.hero-glow-b {
+  position:absolute; z-index:0; bottom:-20%; right:-12%;
+  width:560px; height:560px; border-radius:50%;
+  background:radial-gradient(circle, rgba(199,209,206,0.22) 0%, transparent 70%);
+}
+.hero-orbit {
+  position:absolute; z-index:1; top:50%; left:50%;
+  width:min(720px,92vw); height:min(720px,92vw);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  animation: orbit-spin 140s linear infinite;
+}
+@keyframes orbit-spin { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+
+.hero-content {
+  position:relative; z-index:2;
+  max-width:760px; width:100%;
+  padding:150px 24px 90px;
+  display:flex; flex-direction:column; align-items:center;
+}
+
+.hero-tag {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(255,255,255,0.06); color:var(--silver);
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px; font-weight:500; letter-spacing:0.06em;
+  padding:8px 16px; border-radius:6px; width:fit-content;
+  border:1px solid rgba(255,255,255,0.14);
+  margin-bottom:36px;
+  animation: up .7s ease both .1s;
+}
+.hero-tag-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:var(--green-light);
+  animation: pulse-slow 2.4s ease infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+@keyframes pulse-slow { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+h1 {
+  font-family:'Fraunces',serif;
+  font-size: clamp(46px,6vw,80px);
+  font-weight:300; line-height:1.08;
+  letter-spacing:-0.03em;
+  color:var(--white); margin-bottom:24px;
+  animation: up .7s ease both .2s;
+}
+h1 em { font-style:italic; font-weight:300; color:var(--green-light); }
+
+.hero-sub {
+  font-size:17px; line-height:1.8; color:rgba(250,248,244,0.65);
+  max-width:480px; margin-bottom:40px;
+  animation: up .7s ease both .3s;
+}
+
+.hero-btns {
+  display:flex; gap:14px; align-items:center; justify-content:center;
+  margin-bottom:56px;
+  animation: up .7s ease both .4s;
+}
+
+.btn {
+  font-family:'Outfit',sans-serif; font-size:14px; font-weight:500;
+  padding:14px 34px; border-radius:7px; text-decoration:none;
+  transition: all .2s; display:inline-block;
+}
+.btn-dark { background:var(--green); color:var(--white); }
+.btn-dark:hover { background:var(--green-mid); transform:translateY(-2px); }
+.btn-ghost {
+  color:var(--green); font-weight:400;
+  display:flex; align-items:center; gap:8px;
+  transition: gap .2s;
+}
+.btn-ghost:hover { gap:14px; }
+
+.hero-nums {
+  display:flex; gap:0; margin-top:8px;
+  border-top:1.5px solid rgba(255,255,255,0.12);
+  animation: up .7s ease both .6s;
+}
+.hero-num {
+  flex:1; padding:24px 0 0;
+  border-right:1.5px solid rgba(255,255,255,0.12);
+}
+.hero-num:last-child { border-right:none; padding-left:28px; }
+.hero-num:first-child { padding-right:28px; }
+.hero-num:nth-child(2) { padding:24px 28px 0; }
+.num-val {
+  font-family:'Fraunces',serif; font-size:36px; font-weight:300;
+  color:var(--white); line-height:1; margin-bottom:6px;
+}
+.num-label { font-size:11px; color:var(--silver-dim); font-family:'JetBrains Mono', monospace; letter-spacing:0.04em; text-transform:uppercase; }
+
+/* Code editor panel */
+.editor {
+  width:100%; max-width:480px; margin:0 0 56px;
+  background:#0A1A12; border-radius:12px;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06);
+  overflow:hidden; position:relative; z-index:2;
+  font-family:'JetBrains Mono', monospace;
+  animation: editor-in .8s cubic-bezier(.16,1,.3,1) both .5s;
+}
+@keyframes editor-in { from{opacity:0; transform:translateY(18px) scale(.98)} to{opacity:1; transform:translateY(0) scale(1)} }
+
+.editor-top {
+  background:#0D2318; padding:11px 16px;
+  display:flex; align-items:center; gap:14px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.editor-dots { display:flex; gap:6px; }
+.editor-dots .dot { width:9px; height:9px; border-radius:50%; }
+.d1{background:#FF5F57} .d2{background:#FFBD2E} .d3{background:#28CA41}
+.editor-tab {
+  display:flex; align-items:center; gap:7px;
+  font-size:12px; font-weight:500; color:rgba(255,255,255,0.75);
+}
+.editor-tab-icon { color:var(--green-light); font-size:11px; }
+.editor-status {
+  margin-left:auto; display:flex; align-items:center; gap:6px;
+  font-size:11px; color:var(--green-light); letter-spacing:.04em;
+}
+.editor-status-dot {
+  width:6px; height:6px; border-radius:50%; background:var(--green-light);
+  animation:pulse-slow 2.4s ease infinite;
+}
+
+.editor-body { padding:22px 20px 26px; font-size:12.5px; line-height:1.95; text-align:left; }
+.editor-line { display:flex; gap:14px; white-space:pre; }
+.ln { color:rgba(255,255,255,0.2); width:14px; text-align:right; flex-shrink:0; user-select:none; }
+.code-tag { color:#6FCF97; }
+.code-attr { color:#E3B341; }
+.code-str { color:#E8927C; }
+.code-plain { color:rgba(255,255,255,0.82); }
+.code-comment { color:rgba(255,255,255,0.32); font-style:italic; }
+.cursor {
+  display:inline-block; width:2px; height:13px; background:#6FCF97;
+  margin-left:3px; vertical-align:-2px;
+  animation:cursor-blink 1s step-end infinite;
+}
+@keyframes cursor-blink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
+
+/* ── STRIP ── */
+.strip {
+  background:var(--green-pale);
+  border-top:1.5px solid var(--green-line);
+  border-bottom:1.5px solid var(--green-line);
+  padding:14px 0; overflow:hidden;
+}
+.strip-track { display:inline-flex; animation:ticker 28s linear infinite; white-space:nowrap; }
+.strip-item {
+  font-size:13px; font-weight:500; color:var(--green);
+  padding:0 28px; display:flex; align-items:center; gap:28px;
+}
+.strip-item::after { content:'·'; color:var(--green-light); font-size:18px; }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ── SECTION COMMONS ── */
+.tag {
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px; font-weight:500; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--green-light);
+  margin-bottom:20px;
+}
+.tag::before { content:''; width:20px; height:2px; background:var(--green-light); }
+
+h2 {
+  font-family:'Fraunces',serif;
+  font-size:clamp(34px,4vw,54px); font-weight:300;
+  line-height:1.12; letter-spacing:-0.02em;
+  color:var(--green);
+}
+h2 em { font-style:italic; }
+
+/* ── SERVICES ── */
+.services { padding:112px 56px; background:var(--white); }
+
+.s-head {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:48px; align-items:end; margin-bottom:64px;
+}
+.s-right {
+  font-size:16px; line-height:1.8; color:var(--text-mid);
+  max-width:380px; align-self:end;
+}
+
+.s-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+
+.s-card {
+  background:var(--off); border:1.5px solid var(--border);
+  border-radius:12px; padding:44px 36px;
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+  position:relative; overflow:hidden;
+}
+.s-card::after {
+  content:''; position:absolute; left:0; bottom:0; right:0; height:3px;
+  background:var(--green); transform:scaleX(0); transform-origin:left;
+  transition:transform .35s ease;
+}
+.s-card:hover {
+  border-color:var(--green-light); transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(15,61,34,0.1);
+}
+.s-card:hover::after { transform:scaleX(1); }
+
+.s-icon {
+  width:48px; height:48px; background:var(--green-pale);
+  border-radius:10px; display:flex; align-items:center;
+  justify-content:center; font-size:22px; margin-bottom:24px;
+}
+.s-name {
+  font-family:'Fraunces',serif; font-size:22px; font-weight:400;
+  color:var(--green); margin-bottom:12px;
+}
+.s-desc { font-size:14px; line-height:1.85; color:var(--text-mid); margin-bottom:24px; }
+.s-price {
+  font-size:15px; font-weight:500; color:var(--green);
+  padding-top:20px; border-top:1.5px solid var(--border);
+}
+
+/* ── PROCESS ── */
+.process {
+  background:var(--green); padding:112px 56px;
+}
+.process .tag { color:rgba(255,255,255,0.5); }
+.process .tag::before { background:rgba(255,255,255,0.3); }
+.process h2 { color:var(--white); margin-bottom:72px; }
+
+.p-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:0; position:relative;
+}
+.p-grid::before {
+  content:''; position:absolute;
+  top:28px; left:7%; right:7%; height:1px;
+  background:rgba(255,255,255,0.12);
+}
+
+.p-step { padding-right:40px; position:relative; }
+.p-step:last-child { padding-right:0; }
+
+.p-circle {
+  width:56px; height:56px; border-radius:50%;
+  border:1.5px solid rgba(255,255,255,0.25);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Fraunces',serif; font-size:20px; font-weight:300;
+  color:var(--white); margin-bottom:28px;
+  position:relative; z-index:2; background:var(--green);
+  transition: background .25s, border-color .25s;
+}
+.p-step:hover .p-circle { background:var(--green-light); border-color:var(--green-light); }
+
+.p-title { font-size:17px; font-weight:500; color:var(--white); margin-bottom:10px; }
+.p-desc { font-size:13px; line-height:1.85; color:rgba(255,255,255,0.55); }
+
+/* ── PORTFOLIO ── */
+.portfolio { padding:112px 56px; background:var(--off); }
+
+.po-head {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:48px; align-items:end; margin-bottom:64px;
+}
+
+.po-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+.po-card {
+  border-radius:12px; overflow:hidden;
+  position:relative; aspect-ratio:16/9; cursor:pointer;
+}
+.po-bg { width:100%; height:100%; transition:transform .5s ease; }
+.po-card:hover .po-bg { transform:scale(1.04); }
+
+.g1{background:linear-gradient(135deg,#0F3D22,#2E8B57)}
+.g2{background:linear-gradient(135deg,#081F12,#1A5C35)}
+.g3{background:linear-gradient(135deg,#1A3D1A,#4A8B30)}
+.g4{background:linear-gradient(135deg,#1A2D3D,#2D6B8B)}
+
+.po-emoji {
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  font-size:52px; opacity:.18; pointer-events:none;
+}
+.po-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(10,31,18,0.92) 0%, transparent 55%);
+  opacity:0; transition:opacity .35s;
+  display:flex; align-items:flex-end; padding:28px;
+}
+.po-card:hover .po-overlay { opacity:1; }
+.po-type {
+  font-size:11px; letter-spacing:.15em; text-transform:uppercase;
+  color:rgba(255,255,255,0.6); margin-bottom:5px;
+}
+.po-name {
+  font-family:'Fraunces',serif; font-size:22px;
+  font-weight:300; color:var(--white);
+}
+
+/* ── WHY ── */
+.why { padding:112px 56px; background:var(--white); }
+
+.why-head {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:48px; align-items:end; margin-bottom:64px;
+}
+
+.why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+
+.why-card {
+  padding:44px 36px; border:1.5px solid var(--border);
+  border-radius:12px; transition: border-color .25s, box-shadow .25s;
+}
+.why-card:hover {
+  border-color:var(--green-light);
+  box-shadow:0 10px 28px rgba(15,61,34,0.07);
+}
+.why-icon { font-size:30px; margin-bottom:18px; }
+.why-title {
+  font-family:'Fraunces',serif; font-size:20px; font-weight:400;
+  color:var(--green); margin-bottom:10px;
+}
+.why-desc { font-size:14px; line-height:1.85; color:var(--text-mid); }
+
+/* ── PRICING ── */
+.pricing { padding:112px 56px; background:var(--off); }
+
+.pr-head { margin-bottom:64px; }
+.pr-sub {
+  font-size:16px; line-height:1.8; color:var(--text-mid);
+  max-width:480px; margin-top:16px;
+}
+
+.pr-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+
+.pr-card {
+  background:var(--white); border:1.5px solid var(--border);
+  border-radius:12px; padding:44px 36px;
+  transition: transform .25s, box-shadow .25s;
+}
+.pr-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(15,61,34,0.08); }
+
+.pr-card.best {
+  background:var(--green); border-color:var(--green);
+}
+
+.best-tag {
+  display:inline-block; background:rgba(255,255,255,0.15);
+  color:var(--white); font-size:11px; font-weight:500;
+  letter-spacing:0.08em; padding:5px 12px; border-radius:100px;
+  margin-bottom:28px;
+}
+
+.pr-name {
+  font-size:12px; font-weight:500; letter-spacing:0.12em;
+  text-transform:uppercase; color:var(--text-soft); margin-bottom:16px;
+}
+.pr-card.best .pr-name { color:rgba(255,255,255,0.55); }
+
+.pr-price {
+  font-family:'Fraunces',serif; font-size:52px; font-weight:300;
+  color:var(--green); line-height:1; margin-bottom:4px;
+}
+.pr-card.best .pr-price { color:var(--white); }
+
+.pr-period { font-size:13px; color:var(--text-soft); margin-bottom:24px; }
+.pr-card.best .pr-period { color:rgba(255,255,255,0.45); }
+
+.pr-desc {
+  font-size:14px; line-height:1.8; color:var(--text-mid);
+  border-bottom:1.5px solid var(--border);
+  padding-bottom:24px; margin-bottom:24px;
+}
+.pr-card.best .pr-desc { color:rgba(255,255,255,0.65); border-bottom-color:rgba(255,255,255,0.15); }
+
+.pr-list { list-style:none; margin-bottom:36px; }
+.pr-item {
+  font-size:14px; color:var(--text-mid); padding:10px 0;
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:10px;
+}
+.pr-card.best .pr-item { color:rgba(255,255,255,0.75); border-bottom-color:rgba(255,255,255,0.1); }
+.pr-item::before { content:'✓'; color:var(--green-light); font-weight:600; flex-shrink:0; }
+.pr-card.best .pr-item::before { color:rgba(255,255,255,0.7); }
+
+.pr-btn {
+  display:block; text-align:center;
+  padding:14px; border-radius:7px;
+  font-family:'Outfit',sans-serif; font-size:14px; font-weight:500;
+  text-decoration:none; transition:all .2s;
+}
+.pr-card:not(.best) .pr-btn {
+  border:1.5px solid var(--green); color:var(--green);
+}
+.pr-card:not(.best) .pr-btn:hover { background:var(--green); color:var(--white); }
+.pr-card.best .pr-btn { background:var(--white); color:var(--green); }
+.pr-card.best .pr-btn:hover { background:var(--green-pale); }
+
+/* ── QUOTE ── */
+.quote-strip {
+  padding:80px 56px;
+  background:var(--green-pale);
+  border-top:1.5px solid var(--green-line);
+  border-bottom:1.5px solid var(--green-line);
+  text-align:center;
+}
+.q-stars { color:#F5A623; font-size:22px; margin-bottom:20px; }
+.q-text {
+  font-family:'Fraunces',serif;
+  font-size:clamp(20px,2.5vw,32px); font-weight:300; font-style:italic;
+  color:var(--green); line-height:1.55; max-width:720px;
+  margin:0 auto 24px;
+}
+.q-author { font-size:14px; font-weight:400; color:var(--text-mid); }
+
+/* ── CTA ── */
+.cta {
+  padding:112px 56px; background:var(--green);
+  text-align:center; position:relative; overflow:hidden;
+}
+.cta::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 46px);
+  background-size:42px 42px, 42px 42px, auto;
+}
+.cta-inner { position:relative; z-index:2; }
+.cta h2 { color:var(--white); margin-bottom:20px; }
+.cta p {
+  font-size:17px; color:rgba(255,255,255,0.65);
+  max-width:440px; margin:0 auto 44px; line-height:1.75;
+}
+.cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-w {
+  background:var(--white); color:var(--green);
+  font-family:'Outfit',sans-serif; font-size:14px; font-weight:500;
+  padding:14px 38px; border-radius:7px; text-decoration:none;
+  transition:all .2s;
+}
+.btn-w:hover { background:var(--green-pale); transform:translateY(-2px); }
+.btn-o {
+  border:1.5px solid rgba(255,255,255,0.35); color:var(--white);
+  font-family:'Outfit',sans-serif; font-size:14px; font-weight:400;
+  padding:14px 38px; border-radius:7px; text-decoration:none;
+  transition:all .2s;
+}
+.btn-o:hover { border-color:rgba(255,255,255,0.7); }
+
+/* ── FOOTER ── */
+footer {
+  background:#091A0F; padding:72px 56px 36px;
+}
+.ft {
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:56px; margin-bottom:56px;
+  padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.ft-logo { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.ft-logo-box {
+  width:30px; height:30px; background:var(--green-mid);
+  border-radius:7px; display:flex; align-items:center; justify-content:center;
+}
+.ft-logo-name {
+  font-family:'Fraunces',serif; font-size:17px; font-weight:600;
+  color:var(--white); letter-spacing:-0.02em;
+}
+.ft-desc { font-size:13px; line-height:1.85; color:rgba(255,255,255,0.35); max-width:240px; margin-bottom:24px; }
+.ft-live {
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid rgba(46,139,87,0.4); color:rgba(46,139,87,0.9);
+  font-size:12px; font-weight:500; padding:7px 14px; border-radius:100px;
+}
+.ft-live-dot { width:6px; height:6px; border-radius:50%; background:#2E8B57; animation:blink 2s ease infinite; }
+.ft-col h4 {
+  font-size:11px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase;
+  color:rgba(255,255,255,0.3); margin-bottom:20px;
+}
+.ft-col ul { list-style:none; }
+.ft-col li { margin-bottom:11px; }
+.ft-col a { font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none; transition:color .2s; }
+.ft-col a:hover { color:var(--white); }
+.ft-bottom {
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:12px; color:rgba(255,255,255,0.2);
+}
+
+/* ── REVEAL ── */
+.r { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+.r.on { opacity:1; transform:translateY(0); }
+
+/* ── KEYFRAMES ── */
+@keyframes up { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero{min-height:auto;}
+  .hero-content{padding:120px 20px 64px;}
+  .hero-nums{gap:0;}
+  .hero-num:nth-child(2){padding:24px 16px 0;}
+  .services,.process,.portfolio,.why,.pricing,.cta,.quote-strip{padding:80px 24px;}
+  .s-head,.po-head,.why-head{grid-template-columns:1fr; gap:20px;}
+  .s-grid,.pr-grid{grid-template-columns:1fr;}
+  .p-grid{grid-template-columns:1fr 1fr; gap:40px;}
+  .p-grid::before{display:none;}
+  .po-grid,.why-grid{grid-template-columns:1fr;}
+  .cta-btns{flex-direction:column; align-items:center;}
+  .ft{grid-template-columns:1fr; gap:36px;}
+  .ft-bottom{flex-direction:column; gap:10px; text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-box">
+      <svg viewBox="0 0 18 18" fill="none">
+        <path d="M9 2L16 9L9 16L2 9Z" fill="white" opacity=".85"/>
+        <circle cx="9" cy="9" r="2.5" fill="white"/>
+      </svg>
+    </div>
+    <span class="logo-name">Rebel Web</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-btn">Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow-a"></div>
+  <div class="hero-glow-b"></div>
+  <svg class="hero-orbit" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="300" cy="300" r="260" stroke="rgba(199,209,206,0.16)" stroke-width="1"/>
+    <circle cx="300" cy="300" r="180" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <ellipse cx="300" cy="300" rx="260" ry="95" stroke="rgba(199,209,206,0.14)" stroke-width="1"/>
+    <ellipse cx="300" cy="300" rx="260" ry="165" stroke="rgba(199,209,206,0.1)" stroke-width="1"/>
+    <ellipse cx="300" cy="300" rx="95" ry="260" stroke="rgba(46,139,87,0.18)" stroke-width="1"/>
+    <ellipse cx="300" cy="300" rx="165" ry="260" stroke="rgba(46,139,87,0.12)" stroke-width="1"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-dot"></div>
+      STATUS: ACCEPTING NEW CLIENTS
+    </div>
+    <h1>Simple websites.<br><em>Real results.</em></h1>
+    <p class="hero-sub">Affordable, professional websites for small businesses. No tech jargon, no hidden costs — just a site that works and brings you customers.</p>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-w">See pricing</a>
+      <a href="#portfolio" class="btn-o">View our work →</a>
+    </div>
+    <div class="editor">
+      <div class="editor-top">
+        <div class="editor-dots">
+          <div class="dot d1"></div>
+          <div class="dot d2"></div>
+          <div class="dot d3"></div>
+        </div>
+        <div class="editor-tab"><span class="editor-tab-icon">&lt;/&gt;</span>site.html</div>
+        <div class="editor-status"><span class="editor-status-dot"></span>live</div>
+      </div>
+      <div class="editor-body">
+        <div class="editor-line"><span class="ln">1</span><span class="code-tag">&lt;!DOCTYPE html&gt;</span></div>
+        <div class="editor-line"><span class="ln">2</span><span class="code-tag">&lt;html</span> <span class="code-attr">lang</span>=<span class="code-str">"en"</span><span class="code-tag">&gt;</span></div>
+        <div class="editor-line"><span class="ln">3</span><span class="code-comment">&nbsp;&nbsp;&lt;!-- hand-coded, zero bloat --&gt;</span></div>
+        <div class="editor-line"><span class="ln">4</span><span class="code-tag">&nbsp;&nbsp;&lt;h1&gt;</span><span class="code-plain">Simple websites.</span><span class="code-tag">&lt;/h1&gt;</span></div>
+        <div class="editor-line"><span class="ln">5</span><span class="code-tag">&nbsp;&nbsp;&lt;p&gt;</span><span class="code-plain">Real results.</span><span class="code-tag">&lt;/p&gt;</span></div>
+        <div class="editor-line"><span class="ln">6</span><span class="code-tag">&nbsp;&nbsp;&lt;a</span> <span class="code-attr">href</span>=<span class="code-str">"#quote"</span><span class="code-tag">&gt;</span><span class="code-plain">Get a quote</span><span class="code-tag">&lt;/a&gt;</span></div>
+        <div class="editor-line"><span class="ln">7</span><span class="code-tag">&lt;/html&gt;</span></div>
+        <div class="editor-line"><span class="ln">8</span><span class="code-comment">&lt;!-- deploying… live in 5 days --&gt;</span><span class="cursor"></span></div>
+      </div>
+    </div>
+    <div class="hero-nums">
+      <div class="hero-num">
+        <div class="num-val">7</div>
+        <div class="num-label">Day turnaround</div>
+      </div>
+      <div class="hero-num">
+        <div class="num-val">€399</div>
+        <div class="num-label">Starting from</div>
+      </div>
+      <div class="hero-num">
+        <div class="num-val" style="font-size:20px;padding-top:6px;line-height:1.2">Cork,<br>Ireland</div>
+        <div class="num-label">Irish owned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item">Professional Websites</span>
+    <span class="strip-item">Small Businesses</span>
+    <span class="strip-item">7 Day Delivery</span>
+    <span class="strip-item">Mobile Friendly</span>
+    <span class="strip-item">SEO Ready</span>
+    <span class="strip-item">Fixed Prices</span>
+    <span class="strip-item">No Hidden Fees</span>
+    <span class="strip-item">Independently Owned</span>
+    <span class="strip-item">Professional Websites</span>
+    <span class="strip-item">Small Businesses</span>
+    <span class="strip-item">7 Day Delivery</span>
+    <span class="strip-item">Mobile Friendly</span>
+    <span class="strip-item">SEO Ready</span>
+    <span class="strip-item">Fixed Prices</span>
+    <span class="strip-item">No Hidden Fees</span>
+    <span class="strip-item">Independently Owned</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="s-head r">
+    <div>
+      <div class="tag">What we offer</div>
+      <h2>Everything your<br>business needs <em>online.</em></h2>
+    </div>
+    <p class="s-right">We keep things simple. No complicated packages or upsells — just the right website for your business at a fair price.</p>
+  </div>
+  <div class="s-grid">
+    <div class="s-card r">
+      <div class="s-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="3" width="18" height="13" rx="2" stroke="#2E8B57" stroke-width="1.8"/><path d="M7 19h8M11 16v3" stroke="#2E8B57" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <div class="s-name">Starter Website</div>
+      <div class="s-desc">A sharp, well-designed website up to 4 pages. Built to make a strong first impression and turn visitors into customers from day one.</div>
+      <div class="s-price">€399 — once off</div>
+    </div>
+    <div class="s-card r">
+      <div class="s-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 7.4H21l-6.2 4.5 2.4 7.4L11 17l-6.2 4.3 2.4-7.4L1 9.4h7.6z" stroke="#2E8B57" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div class="s-name">Professional Website</div>
+      <div class="s-desc">A fully custom website up to 8 pages, built to stand out in your industry. Includes SEO setup so new customers can find you on Google.</div>
+      <div class="s-price">€699 — once off</div>
+    </div>
+    <div class="s-card r">
+      <div class="s-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M14.5 3.5a5 5 0 010 7 5 5 0 01-5.7.9L4 16.2A1.8 1.8 0 106.4 18l4.8-4.8a5 5 0 01.9-5.7 5 5 0 012.4-4z" stroke="#2E8B57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="s-name">Monthly Care Plan</div>
+      <div class="s-desc">Your site stays fresh, accurate and secure every month. Up to 3 updates handled within 48 hours — just message us.</div>
+      <div class="s-price">€30 per month</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="tag r">How it works</div>
+  <h2 class="r">Live in four<br><em>simple steps.</em></h2>
+  <div class="p-grid">
+    <div class="p-step r">
+      <div class="p-circle">1</div>
+      <div class="p-title">Free Chat</div>
+      <div class="p-desc">Tell us about your business. No obligation, no pressure — just a quick conversation about what you need.</div>
+    </div>
+    <div class="p-step r">
+      <div class="p-circle">2</div>
+      <div class="p-title">We Build</div>
+      <div class="p-desc">We get to work and show you a fully working preview within 7 days — before you pay a single cent.</div>
+    </div>
+    <div class="p-step r">
+      <div class="p-circle">3</div>
+      <div class="p-title">You Approve</div>
+      <div class="p-desc">Happy with it? We fine tune every detail until it's exactly right — your logo, photos and colours.</div>
+    </div>
+    <div class="p-step r">
+      <div class="p-circle">4</div>
+      <div class="p-title">Go Live</div>
+      <div class="p-desc">Your site goes live. We handle the domain, hosting and setup. You just sit back and wait for the calls.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="po-head r">
+    <div>
+      <div class="tag">Our work</div>
+      <h2>Built for <em>small<br>businesses.</em></h2>
+    </div>
+    <p class="s-right">Every site is built from scratch. No templates, no shortcuts — just clean professional websites that work.</p>
+  </div>
+  <div class="po-grid">
+    <div class="po-card r" onclick="window.open('demo-cafe.html','_blank')" style="cursor:pointer">
+      <div class="po-bg g1" style="background:linear-gradient(160deg,#1A3D2B,#2E8B57);position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.06) 1px,transparent 0);background-size:28px 28px"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(to top,rgba(10,31,18,0.95),transparent)">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px">Café · Cork City</div>
+          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:300;color:var(--white)">Ember & Ground</div>
+        </div>
+      </div>
+      <div class="po-overlay">
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:flex-end">
+          <div><div class="po-type">Café · Cork City</div><div class="po-name">Ember & Ground</div></div>
+          <div style="background:var(--green);color:var(--white);font-size:11px;font-weight:500;letter-spacing:0.1em;padding:8px 16px;border-radius:4px;white-space:nowrap">View Site →</div>
+        </div>
+      </div>
+    </div>
+    <div class="po-card r" onclick="window.open('demo-salon.html','_blank')" style="cursor:pointer">
+      <div class="po-bg" style="background:linear-gradient(160deg,#F5E6E0,#C4856A);position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(196,133,106,0.3) 1px,transparent 0);background-size:24px 24px"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(to top,rgba(42,30,26,0.95),transparent)">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px">Hair Salon · Cork City</div>
+          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:300;color:var(--white)">Glow Studio</div>
+        </div>
+      </div>
+      <div class="po-overlay">
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:flex-end">
+          <div><div class="po-type">Hair Salon · Cork City</div><div class="po-name">Glow Studio</div></div>
+          <div style="background:var(--green);color:var(--white);font-size:11px;font-weight:500;letter-spacing:0.1em;padding:8px 16px;border-radius:4px;white-space:nowrap">View Site →</div>
+        </div>
+      </div>
+    </div>
+    <div class="po-card r" onclick="window.open('demo-plumber.html','_blank')" style="cursor:pointer">
+      <div class="po-bg" style="background:linear-gradient(160deg,#0D1B2A,#1E4D7B);position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.02) 0px,rgba(255,255,255,0.02) 1px,transparent 1px,transparent 40px)"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(to top,rgba(13,27,42,0.95),transparent)">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px">Plumber · Cork</div>
+          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:300;color:var(--white)">Murphy & Sons</div>
+        </div>
+      </div>
+      <div class="po-overlay">
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:flex-end">
+          <div><div class="po-type">Plumber · Cork</div><div class="po-name">Murphy & Sons</div></div>
+          <div style="background:var(--green);color:var(--white);font-size:11px;font-weight:500;letter-spacing:0.1em;padding:8px 16px;border-radius:4px;white-space:nowrap">View Site →</div>
+        </div>
+      </div>
+    </div>
+    <div class="po-card r" onclick="window.open('demo-restaurant.html','_blank')" style="cursor:pointer">
+      <div class="po-bg" style="background:linear-gradient(160deg,#2C1810,#6B3D26);position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(212,130,26,0.15) 1px,transparent 0);background-size:32px 32px"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(to top,rgba(44,24,16,0.95),transparent)">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px">Restaurant · Cork City</div>
+          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:300;color:var(--white)">The Anchor</div>
+        </div>
+      </div>
+      <div class="po-overlay">
+        <div style="width:100%;display:flex;justify-content:space-between;align-items:flex-end">
+          <div><div class="po-type">Restaurant · Cork City</div><div class="po-name">The Anchor</div></div>
+          <div style="background:var(--green);color:var(--white);font-size:11px;font-weight:500;letter-spacing:0.1em;padding:8px 16px;border-radius:4px;white-space:nowrap">View Site →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="why-head r">
+    <div>
+      <div class="tag">Why Rebel Web</div>
+      <h2>Built for<br><em>small businesses.</em></h2>
+    </div>
+    <p class="s-right">We understand what small businesses actually need — and what they shouldn't have to pay for.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card r">
+      <div class="why-icon" style="font-size:0;background:var(--green-pale);width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h14M10 3v14" stroke="#2E8B57" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <div class="why-title">Irish Owned</div>
+      <div class="why-desc">We're based in Ireland and understand the local market. You're always talking to a real person who genuinely cares about your results.</div>
+    </div>
+    <div class="why-card r">
+      <div class="why-icon" style="font-size:0;background:var(--green-pale);width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="8" width="14" height="9" rx="2" stroke="#2E8B57" stroke-width="1.8"/><path d="M7 8V6a3 3 0 016 0v2" stroke="#2E8B57" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <div class="why-title">Fair Fixed Prices</div>
+      <div class="why-desc">No surprise invoices. You know exactly what you're paying before we start. A fraction of agency prices with no compromise on quality.</div>
+    </div>
+    <div class="why-card r">
+      <div class="why-icon" style="font-size:0;background:var(--green-pale);width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M11 3L5 11h6l-2 6 8-10h-6l2-4z" stroke="#2E8B57" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+      <div class="why-title">Ready in 7 Days</div>
+      <div class="why-desc">Your website ready in a week, not three months. We move fast because we know you need to get online and start getting customers.</div>
+    </div>
+    <div class="why-card r">
+      <div class="why-icon" style="font-size:0;background:var(--green-pale);width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#2E8B57" stroke-width="1.8"/><path d="M7 10l2 2 4-4" stroke="#2E8B57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="why-title">Zero Tech Stress</div>
+      <div class="why-desc">You don't need to know a thing about websites. We handle everything from start to finish and explain it all in plain English.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="pr-head r">
+    <div class="tag">Pricing</div>
+    <h2>Honest prices.<br><em>No surprises.</em></h2>
+    <p class="pr-sub">Every package includes design, development, mobile optimisation and launch. What you see is what you pay.</p>
+  </div>
+  <div class="pr-grid">
+    <div class="pr-card r">
+      <div class="pr-name">Starter</div>
+      <div class="pr-price">€399</div>
+      <div class="pr-period">once off payment</div>
+      <div class="pr-desc">Perfect for getting online quickly with a clean professional presence.</div>
+      <ul class="pr-list">
+        <li class="pr-item">Up to 4 pages</li>
+        <li class="pr-item">Custom design</li>
+        <li class="pr-item">SEO setup</li>
+        <li class="pr-item">Fast loading speed</li>
+        <li class="pr-item">Live in 5 days</li>
+      </ul>
+      <a href="#contact" class="pr-btn">Get started</a>
+    </div>
+    <div class="pr-card best r">
+      <div class="best-tag">Most Popular</div>
+      <div class="pr-name">Professional</div>
+      <div class="pr-price">€699</div>
+      <div class="pr-period">once off payment</div>
+      <div class="pr-desc">Everything you need to look serious online and get found by customers searching Google.</div>
+      <ul class="pr-list">
+        <li class="pr-item">Up to 8 pages</li>
+        <li class="pr-item">Premium custom design</li>
+        <li class="pr-item">SEO setup included</li>
+        <li class="pr-item">Unlimited revisions</li>
+        <li class="pr-item">1 month free support</li>
+        <li class="pr-item">Live in 7 days</li>
+      </ul>
+      <a href="#contact" class="pr-btn">Get started</a>
+    </div>
+    <div class="pr-card r">
+      <div class="pr-name">Monthly Care</div>
+      <div class="pr-price">€30</div>
+      <div class="pr-period">per month</div>
+      <div class="pr-desc">Keep your site fresh, updated and secure every single month without lifting a finger.</div>
+      <ul class="pr-list">
+        <li class="pr-item">Up to 3 changes per month</li>
+        <li class="pr-item">Security monitoring</li>
+        <li class="pr-item">Monthly backup</li>
+        <li class="pr-item">Priority support</li>
+        <li class="pr-item">Cancel anytime</li>
+      </ul>
+      <a href="#contact" class="pr-btn">Get started</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-strip r">
+  <div class="q-stars">★★★★★</div>
+  <div class="q-text">"We had no website for years and always put it off. Rebel Web had us live in a week and the phone hasn't stopped since. Best money we ever spent."</div>
+  <div class="q-author">Seán Murphy — Murphy's Plumbing, Galway</div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-head r">
+    <div>
+      <div class="tag">FAQ</div>
+      <h2>Questions<br><em>answered.</em></h2>
+    </div>
+    <p class="s-right">Everything you need to know before getting started. Still have a question? Just drop us a message.</p>
+  </div>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How much does a website cost?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">Our <strong>Starter package is €399</strong> once off — up to 4 pages, live in 5 days. Our <strong>Professional package is €699</strong> once off — up to 8 pages, live in 7 days, with a free month of the care plan included. There are no hidden extras. What you see is what you pay.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do I have to pay anything ongoing?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">Not unless you want to. The once-off fee covers design, build and launch. The only ongoing costs are your domain (usually €15–30/year, which you buy yourself) and optionally our <strong>Monthly Care Plan at €30/month</strong> if you'd like us to handle updates. The care plan is completely optional and can be cancelled anytime.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How does hosting work?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">We handle all hosting on your behalf — no setup required on your end. Your site is hosted on fast, reliable infrastructure at no extra charge. You just buy your domain (we'll point you to the right place) and we take care of everything else.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How long does it take to go live?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">Starter sites are typically live in <strong>5 days</strong>, Professional sites in <strong>7 days</strong>. Once we have your content (logo, photos, text) and any feedback on the preview, we move fast. Most clients are up and running within a week of first contact.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Can I update the site myself?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">We don't use WordPress or any CMS, so there's no login for you to edit the site directly. Instead, our <strong>Monthly Care Plan (€30/month)</strong> covers up to 3 changes per month turned around within 48 hours — just message us. Most small businesses find this far less hassle than managing a CMS themselves.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do you build online shops?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">We specialise in professional brochure websites for small businesses — the kind that showcase your services and get customers to call or enquire. We don't build ecommerce stores with payment processing. If you need a full online shop, we'd recommend <strong>Shopify</strong> for that.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Can you add a booking system?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">We don't build custom booking systems, but we integrate beautifully with free tools like <strong>Calendly</strong>. We add a booking button to your site that links directly to your Calendly page — clean, simple, and free. Most clients love this approach.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Will my site show up on Google?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">Every site we build includes <strong>SEO basics</strong> — proper page titles, meta descriptions, heading structure, fast loading speeds and mobile optimisation. This gives you a solid foundation. We don't offer ongoing SEO campaigns, but getting these fundamentals right from day one makes a real difference.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Are these AI-generated websites?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">We use AI tools to build faster and keep costs low — the same way any modern developer would. Every site is custom designed for your business, reviewed and refined by a real person, and built to a high standard. That's how we can charge €399 instead of €3,000.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What do you need from me to get started?
+        <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#7A9488" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">Not much — just a quick chat about your business, your logo if you have one, any photos you'd like to use, and the text for each page. No text? No problem. We can write it for you based on what you tell us. We'll guide you through every step.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <h2>Ready to get your<br>business <em>online?</em></h2>
+    <p>Free quote, no obligation. We'll have a quick chat and tell you exactly what you need.</p>
+    <div class="cta-btns">
+      <a href="mailto:hello@rebelweb.ie" class="btn-w">Email us — hello@rebelweb.ie</a>
+      <a href="tel:+353214960000" class="btn-o">Or give us a call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-logo">
+        <div class="ft-logo-box">
+          <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
+            <path d="M9 2L16 9L9 16L2 9Z" fill="white" opacity=".85"/>
+            <circle cx="9" cy="9" r="2.5" fill="white"/>
+          </svg>
+        </div>
+        <span class="ft-logo-name">Rebel Web</span>
+      </div>
+      <p class="ft-desc">Simple, affordable websites for small businesses everywhere. Built with care, delivered fast.</p>
+      <div class="ft-live">
+        <div class="ft-live-dot"></div>
+        Taking on new clients
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Starter Website</a></li>
+        <li><a href="#">Professional Website</a></li>
+        <li><a href="#">Monthly Care Plan</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">Our Work</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">How It Works</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">hello@rebelweb.ie</a></li>
+        <li><a href="#">Ireland</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2026 Rebel Web · rebelweb.ie</span>
+    <span>Simple websites. Real results.</span>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.r');
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); }
+    });
+  }, { threshold: 0.08 }).observe;
+
+  els.forEach(el => {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.08 }).observe(el);
+  });
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
+</script>
+</body>
+</html>
