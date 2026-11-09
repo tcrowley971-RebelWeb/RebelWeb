@@ -277,6 +277,15 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--green-light)}
 .faq details[open] .pl::after{transform:translate(-50%,-50%) rotate(0)}
 .faq .ans{padding:0 1.2rem 1.2rem;color:var(--text2);font-size:.96rem}
 .faq .ans strong{font-weight:500;color:var(--text)}
+.sec-faq{padding:clamp(56px,7vw,84px) 0}
+.faq-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:.8rem 2rem;margin-bottom:1.6rem}
+.faq-head p{color:var(--text2);font-size:.95rem}
+.faq2{gap:.5rem}
+@media(min-width:900px){.faq2{grid-template-columns:1fr 1fr;align-items:start;column-gap:.8rem}}
+.faq2 summary{padding:.8rem 1rem;font-size:.95rem;grid-template-columns:1fr 26px}
+.faq2 .pl{width:26px;height:26px;border-radius:8px}
+.faq2 .ans{padding:0 1rem 1rem;font-size:.92rem}
+
 
 /* Contact */
 .contact{padding:clamp(40px,6vw,72px) 0 clamp(56px,7vw,96px)}
@@ -493,7 +502,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--green-light)}
       <button role="tab" aria-selected="true" aria-controls="tp2" id="tb2">Professional</button>
       <button role="tab" aria-selected="false" aria-controls="tp3" id="tb3" tabindex="-1">Monthly Care</button>
     </div>
-    <p class="rv" style="margin:-.4rem 0 1.2rem;color:var(--text2);font-size:.95rem">Not sure which? We'll recommend one on your free chat.</p>
+    <p class="rv" style="margin:-.4rem 0 1.2rem;color:var(--text2);font-size:.95rem">Not sure which? We'll recommend one on your free chat. You only pay once you've approved your preview, by secure card payment through Stripe.</p>
     <div class="tpanel" role="tabpanel" id="tp1" aria-labelledby="tb1">
       <div class="tp-l"><span class="k">Get online fast</span><h3>Starter Website</h3><div class="pr">€299<small>once off</small></div><div class="btns"><a class="btn btn-w" href="#contact">Get started <svg><use href="#i-arrow"/></svg></a></div></div>
       <div class="tp-r"><p>A sharp, well-designed website of up to 5 pages, typically Home, Services, About, Gallery and Contact. Perfect for trades and anyone who mainly needs to be found and called.</p>
@@ -522,7 +531,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--green-light)}
       <div class="step rv d2"><i>3</i><h3>You approve</h3><p>Happy with it? We fine-tune every detail until it's exactly right: your logo, photos and colours.</p></div>
       <div class="step rv d3"><i>4</i><h3>Go live</h3><p>Your site goes live. We handle the domain setup and hosting. You just wait for the calls.</p></div>
     </div>
-    <div class="promise rv"><svg><use href="#i-shield"/></svg><span><b>See it before you pay.</b> You get a working preview of your site before any money changes hands.</span></div>
+    <div class="promise rv"><svg><use href="#i-shield"/></svg><span><b>See it before you pay.</b> You get a working preview of your site before any money changes hands, then pay securely by card, Apple Pay or Google Pay through Stripe.</span></div>
   </div>
 </section>
 
@@ -540,22 +549,20 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--green-light)}
 </section>
 
 <!-- FAQ -->
-<section class="sec" id="faq" data-spy>
-  <div class="wrap fsplit">
-    <div class="rv"><span class="tag">FAQ</span><h2>Questions <em>answered.</em></h2><p class="lead" style="margin-top:1rem">Everything you need to know before getting started. Still have a question? Just drop us a message.</p><p style="margin-top:1.5rem"><a class="tlink" href="#contact">Ask us anything <svg><use href="#i-arrow"/></svg></a></p></div>
-    <div class="faq rv d1">
-      <details><summary>How much does a website cost?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Our <strong>Starter package is €299</strong> once off: up to 5 pages, live in 5 days. Our <strong>Professional package is €499</strong> once off: up to 10 pages, live in 7 days, with a free month of the care plan included. There are no hidden extras.</div></details>
-      <details><summary>Do I have to pay anything ongoing?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Not unless you want to. The once-off fee covers design, build and launch. The only ongoing cost is your domain (usually €15–30 a year, which you buy yourself), plus our optional <strong>Monthly Care Plan at €30 a month</strong> if you'd like us to handle updates. You can cancel the care plan anytime.</div></details>
-      <details><summary>Who owns the domain name?<span class="pl" aria-hidden="true"></span></summary><div class="ans">You do. You buy your domain under your own account (we'll send you a direct link), so it's always yours. We simply point it to your website. If you ever move on, the domain stays fully in your control.</div></details>
-      <details><summary>How does hosting work?<span class="pl" aria-hidden="true"></span></summary><div class="ans">We handle all hosting for you, on fast, reliable infrastructure at no extra charge. No setup is needed on your end.</div></details>
-      <details><summary>How long does it take to go live?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Starter sites are typically live in <strong>5 days</strong> and Professional sites in <strong>7 days</strong>, once we have your content and feedback on the preview. Most clients are up and running within a week of first contact.</div></details>
-      <details><summary>Can I update the site myself?<span class="pl" aria-hidden="true"></span></summary><div class="ans">We don't use WordPress or any CMS, so there's no login to edit the site yourself. Instead, our <strong>Monthly Care Plan (€30 a month)</strong> covers up to 3 changes a month, turned around within 48 hours. Or pay <strong>€19.99</strong> for a one-off update whenever you need one.</div></details>
-      <details><summary>Can I pay for a one-off update instead?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Yes. If you're not on the care plan, you can pay for changes as you need them at <strong>€19.99 per update</strong>, with no monthly commitment. Just message us with what you'd like changed. If you expect to need more than one update a month, the <strong>Monthly Care Plan at €30</strong> works out better value.</div></details>
-      <details><summary>Do you build online shops?<span class="pl" aria-hidden="true"></span></summary><div class="ans">We specialise in professional websites that showcase your services and get customers to call or enquire. We don't build ecommerce stores with payment processing. For a full online shop, we'd recommend <strong>Shopify</strong>.</div></details>
-      <details><summary>Can you add a booking system?<span class="pl" aria-hidden="true"></span></summary><div class="ans">We don't build custom booking systems, but we link up neatly with free tools like <strong>Calendly</strong>. We add a booking button to your site that goes straight to your booking page.</div></details>
-      <details><summary>Will my site show up on Google?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Every site includes <strong>SEO basics</strong>: proper page titles, descriptions, heading structure, fast loading and mobile optimisation. We don't run ongoing SEO campaigns, but getting these fundamentals right from day one makes a real difference.</div></details>
-      <details><summary>Are these AI-generated websites?<span class="pl" aria-hidden="true"></span></summary><div class="ans">We use AI tools to build faster and keep costs low, the same way any modern developer would. Every site is custom designed for your business and reviewed and refined by a real person. That's how we can charge €299 instead of €3,000.</div></details>
-      <details><summary>What do you need from me to get started?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Not much: a quick chat about your business, your logo if you have one, any photos you'd like to use, and the text for each page. No text? No problem. We can write it based on what you tell us.</div></details>
+<section class="sec sec-faq" id="faq" data-spy>
+  <div class="wrap">
+    <div class="faq-head rv"><div><span class="tag">FAQ</span><h2>Questions <em>answered.</em></h2></div><p>Still have a question? <a class="tlink" href="#contact">Ask us anything <svg><use href="#i-arrow"/></svg></a></p></div>
+    <div class="faq faq2 rv d1">
+      <details><summary>How much does a website cost?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Our <strong>Starter package is €299</strong> once off: up to 5 pages, live in 5 days. Our <strong>Professional package is €499</strong> once off: up to 10 pages, live in 7 days, with a free month of the care plan. No hidden extras.</div></details>
+      <details><summary>How do I pay?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Securely through <strong>Stripe</strong>, once you're happy with your preview. Pay by card, Apple Pay or Google Pay. Your card details go straight to Stripe and are never seen or stored by us, and you get a receipt by email.</div></details>
+      <details><summary>Are there any ongoing costs?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Only your domain, usually €15–30 a year, which you buy in your own name. Updates are optional: our <strong>Care Plan is €30 a month</strong> for up to 3 changes, or pay <strong>€19.99</strong> for a one-off update whenever you need one.</div></details>
+      <details><summary>Can I update the site myself?<span class="pl" aria-hidden="true"></span></summary><div class="ans">There's no login to edit it yourself, so there's nothing for you to learn or break. Just message us with what you'd like changed and it's done within 48 hours on the Care Plan, or as a €19.99 one-off.</div></details>
+      <details><summary>Who owns my domain and hosting?<span class="pl" aria-hidden="true"></span></summary><div class="ans">You own your domain, bought under your own account, so it's always yours. We host your site for you on fast, reliable infrastructure at no extra charge and simply point your domain to it.</div></details>
+      <details><summary>How long does it take to go live?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Starter sites are typically live in <strong>5 days</strong> and Professional sites in <strong>7 days</strong>, once we have your content and your feedback on the preview.</div></details>
+      <details><summary>Will my site show up on Google?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Every site includes <strong>SEO basics</strong>: page titles, descriptions, proper headings, fast loading and mobile optimisation. We don't run ongoing SEO campaigns, but these fundamentals make a real difference.</div></details>
+      <details><summary>Can you add bookings or an online shop?<span class="pl" aria-hidden="true"></span></summary><div class="ans">Yes to bookings: we add a button that links to free tools like <strong>Calendly</strong>. We don't build full online shops with checkout; for that we'd recommend <strong>Shopify</strong>.</div></details>
+      <details><summary>Are these AI-generated websites?<span class="pl" aria-hidden="true"></span></summary><div class="ans">We use AI tools to build faster and keep costs low, like any modern developer. Every site is custom designed for your business and reviewed by a real person. That's how we charge €299, not €3,000.</div></details>
+      <details><summary>What do you need from me to get started?<span class="pl" aria-hidden="true"></span></summary><div class="ans">A quick chat about your business, your logo if you have one, some photos, and the text for each page. No text? We'll write it from what you tell us.</div></details>
     </div>
   </div>
 </section>
@@ -589,7 +596,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--green-light)}
       <div><h4>Company</h4><ul><li><a href="#work">Our Work</a></li><li><a href="#templates">Templates</a></li><li><a href="#process">How It Works</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="mailto:hello@rebelweb.ie">hello@rebelweb.ie</a></li><li><a href="https://wa.me/353XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li><li><span>Cork, Ireland</span></li></ul></div>
     </div>
-    <div class="fbase"><span>&copy; <span id="yr">2026</span> Rebel Web &middot; rebelweb.ie</span><span>Simple websites. Real results.</span></div>
+    <div class="fbase"><span>&copy; <span id="yr">2026</span> Rebel Web &middot; rebelweb.ie</span><span>Secure payments by Stripe &middot; Simple websites. Real results.</span></div>
   </div>
 </footer>
 
